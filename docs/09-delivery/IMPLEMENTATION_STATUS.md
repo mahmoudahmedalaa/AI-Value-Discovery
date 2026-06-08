@@ -4,30 +4,32 @@ Last updated: 2026-06-08
 
 ## Current phase
 
-Phase 0 — Product Governance & Repo Foundation
+Phase 1 — Internal Demo / Pre-MVP
 
 ## Current status
 
+- Phase 0 governance foundation is complete.
 - GitHub labels synchronized: 25.
 - GitHub milestones synchronized: 7.
 - GitHub epic issues synchronized: 10.
 - GitHub story issues synchronized: 36.
 - Issue templates and PR template added under `.github/`.
-- Phase 0 stories #3, #4, and #5 are closed as completed.
-- Phase 0 story #2 remains open and blocked until GitHub Project scope is refreshed.
+- GitHub Project board created, linked, and populated with all 46 seeded issues.
+- GitHub Project fields configured: Status, Phase, Epic, Priority, Area, Target Release, Risk, Owner, Estimate, Demo Critical.
+- Project lanes configured: Backlog, Ready, In Progress, In Review, Blocked, Done.
+- Phase 0 issues #1, #2, #3, #4, and #5 are closed as completed.
 
 ## GitHub Project board
 
-- Board status: Blocked by missing GitHub Project scope.
-- Current error: `error: your authentication token is missing required scopes [read:project]
-To request it, run:  gh auth refresh -s read:project`
-- Required action: run `gh auth refresh -s project` and then rerun `python3 scripts/sync-github-governance.py`.
-- Fallback: `docs/09-delivery/LOCAL_PROJECT_BOARD.md` mirrors the seeded backlog until Projects access is available.
+- Board status: Live and populated.
+- Board URL: https://github.com/users/mahmoudahmedalaa/projects/3
+- Board item count: 46.
+- Current lane counts: Done 5, Ready 9, Backlog 32.
 
 ## Next action for Codex
 
-After project scope is refreshed, create/update the GitHub Project board and add the existing issues to it. Then begin Phase 1 with the local demo foundation slice.
+Begin Phase 1 with #7 `[E1-S01] Set up local app scaffold`, followed by #8 local data services and #12/#13 application shell/design tokens.
 
 ## Blockers
 
-GitHub Project access requires `gh auth refresh -s project`.
+None for governance setup.

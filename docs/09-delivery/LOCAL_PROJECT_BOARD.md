@@ -1,46 +1,39 @@
 # Local Project Board
 
-GitHub Project creation is currently blocked by missing project scope, so this file mirrors the seeded backlog until the board can be created.
+GitHub Project is available and is the live delivery board. This file is kept as a lightweight local mirror/reference.
 
-## GitHub Project Blocker
+## GitHub Project
 
-- Required board: `AI Value Discovery Product Build`
-- Current blocker: `error: your authentication token is missing required scopes [read:project]
-To request it, run:  gh auth refresh -s read:project`
-- Unblock command: `gh auth refresh -s project`
-
-After refreshing auth, rerun:
-
-```bash
-python3 scripts/sync-github-governance.py
-```
+- Board: `AI Value Discovery Product Build`
+- URL: https://github.com/users/mahmoudahmedalaa/projects/3
+- Status: Live and populated with all 46 seeded issues.
 
 ## Columns
 
 Backlog, Ready, In Progress, In Review, Blocked, Done.
 
-## Planned GitHub Project Fields
+## GitHub Project Fields
 
 Phase, Epic, Priority, Area, Status, Target Release, Risk, Owner, Estimate, Demo Critical.
 
 ## Backlog
 
 ### #1 [E0] Epic: Product governance and tracking foundation
-- Blocked: #2 [E0-S01] Create GitHub Project board and custom fields
+- Done: #2 [E0-S01] Create GitHub Project board and custom fields
 - Done: #3 [E0-S02] Create repository issue templates
 - Done: #4 [E0-S03] Create implementation status process
 - Done: #5 [E0-S04] Establish branch, commit, and PR standards
 
 ### #6 [E1] Epic: Local demo environment
-- Backlog: #7 [E1-S01] Set up local app scaffold
-- Backlog: #8 [E1-S02] Set up local data services
+- Ready: #7 [E1-S01] Set up local app scaffold
+- Ready: #8 [E1-S02] Set up local data services
 - Backlog: #9 [E1-S03] Create demo seed data
 - Backlog: #10 [E1-S04] Create mock AI provider
 
 ### #11 [E2] Epic: Enterprise design system and application shell
-- Backlog: #12 [E2-S01] Implement app shell and navigation
-- Backlog: #13 [E2-S02] Implement design tokens and core components
-- Backlog: #14 [E2-S03] Create executive cockpit page
+- Ready: #12 [E2-S01] Implement app shell and navigation
+- Ready: #13 [E2-S02] Implement design tokens and core components
+- Ready: #14 [E2-S03] Create executive cockpit page
 
 ### #15 [E3] Epic: Opportunity management
 - Backlog: #16 [E3-S01] Build opportunity backlog table

@@ -1,50 +1,107 @@
 # AI Value Discovery
 
-Prepared by: Mahmoud Alaaeldin / Mal7  
-Repository: `https://github.com/mahmoudahmedalaa/AI-Value-Discovery`  
-Date: 2026-06-08
+AI Value Discovery is an enterprise AI investment decision platform for GCC organizations.
 
-This pack is designed to be unzipped into the repository root and used as the source of truth for Codex or any engineering agent building the AI Value Discovery Platform.
+It helps leadership, transformation, data, risk, and finance teams turn scattered AI ideas, pilots, documents, workflows, and pain points into a ranked, governed, financially defensible AI opportunity portfolio.
 
-## Product thesis
+The product is being built for Mal7's consulting and client delivery motion. It is not a chatbot, deck generator, prompt library, vendor marketplace, or generic project management tool.
 
-AI Value Discovery is not a generic AI strategy chatbot. It is an enterprise AI investment decision platform.
+## Product Purpose
 
-It helps leadership teams turn scattered AI demand into a ranked, governed, financially defensible portfolio of AI opportunities by answering:
+Most enterprises do not need more AI ideas. They need a disciplined way to decide:
 
-- Which opportunities deserve funding now?
-- Which opportunities need data, workflow, risk, or ownership fixes first?
-- Which opportunities should be deferred?
-- Which should be stopped?
-- What evidence, KPIs, data assets, controls, and owners support each decision?
+- Which opportunities deserve funding now.
+- Which opportunities need data, workflow, risk, or ownership fixes first.
+- Which opportunities should be deferred.
+- Which opportunities should be stopped.
+- What evidence, KPIs, data assets, controls, assumptions, and owners support each decision.
 
-## Build mode
+AI Value Discovery is designed to become the system of record for AI demand, value hypotheses, decision history, blockers, funding readiness, and portfolio status.
 
-Start with a **local, no-paid-services internal demo** that runs on Mahmoud's machine, but keep the architecture production-shaped:
+## First Demo Target
 
-- Browser-based web app
-- Local Docker services
-- Local Postgres
-- Local Qdrant
-- Local MinIO/S3-compatible object storage
-- Mock / deterministic AI provider first
-- Optional local Ollama provider if available
-- Model-provider abstraction for later OpenAI / Azure OpenAI / Bedrock / Vertex / local models
-- Client-hosted deployment architecture from day one
+The first build target is a local, no-paid-services internal partner demo. It should run on a developer machine and let Mal7 walk partners through:
 
-## How to use this pack
+1. Select a sample GCC bank workspace.
+2. Review an executive cockpit.
+3. Inspect seeded documents and opportunities.
+4. Run deterministic mock AI extraction.
+5. Review draft opportunities.
+6. Open an opportunity detail page.
+7. Inspect business problem, workflow, KPI, value lever, data assets, systems, controls, evidence, assumptions, and missing information.
+8. Review value, readiness, risk, and fundability scoring.
+9. Open the portfolio cockpit.
+10. See Fund Now, Fix First, Defer, Stop, and Explore Further recommendations.
+11. Generate a sample executive decision-pack preview.
+12. Show audit log, security posture, and data-residency posture.
 
-1. Unzip into the repository root.
-2. Give Codex the prompt in `CODEX_KICKOFF_PROMPT.md`.
-3. Instruct Codex to read `docs/00-master/MASTER_BUILD_BRIEF.md` first.
-4. Codex must create/update the GitHub Project board using `docs/09-delivery/GITHUB_PROJECT_GOVERNANCE.md` and `project_board_seed/epics_and_stories.yaml`.
-5. Codex must keep code, docs, commits, PRs, and board status aligned.
+## Build Principles
 
-## Non-negotiables
+- Browser-based enterprise web platform.
+- Local-first internal demo with no paid services.
+- Mock deterministic AI provider first.
+- Production-shaped architecture from the start.
+- Client-hosted and data-residency-aware deployment model.
+- Evidence, assumptions, confidence, and missing information must be explicit.
+- Human review is required before final decision-pack generation.
+- Every score and recommendation must be explainable and auditable.
 
-- No generic AI slop UI.
-- No neon gradients, fake glow, gimmicky chips, or toy chatbot UX.
-- No unsupported AI claims.
-- Every AI output must distinguish evidence, assumption, inference, confidence, and missing information.
-- Human review is required before decision-pack generation.
-- Data residency and client-hosted deployment must be treated as core product requirements, not later afterthoughts.
+## Preferred Technical Direction
+
+The architecture documents are the source of truth. Current preferred stack:
+
+- Next.js
+- TypeScript
+- Tailwind
+- shadcn/ui or equivalent component system
+- PostgreSQL
+- Qdrant
+- MinIO or local S3-compatible object storage
+- Provider abstraction for mock AI first, then OpenAI, Azure OpenAI, Bedrock, Vertex, or local models later
+- Docker Compose
+- Unit, integration, and Playwright E2E tests
+
+Material technical decisions should be recorded as ADRs.
+
+## Repository Map
+
+- `docs/00-master/` - product north star and document index
+- `docs/01-product/` - product strategy, PRD, scope, personas, user stories
+- `docs/02-methodology/` - scoring, value levers, KPI, data readiness, risk/control methodology
+- `docs/03-ux/` - information architecture, journeys, wireframes, design system, UX copy
+- `docs/04-architecture/` - system architecture, data model, APIs, deployment, stack decisions
+- `docs/05-ai/` - AI system design, RAG architecture, prompts, schemas, routing, guardrails
+- `docs/06-security-compliance/` - security, data residency, tenant isolation, audit, privacy
+- `docs/07-engineering/` - repo structure, standards, local setup, definition of done, ADRs
+- `docs/08-testing/` - test strategy, test cases, fixtures, UAT, performance requirements
+- `docs/09-delivery/` - roadmap, governance, implementation status, backlog, demo script
+- `docs/10-commercial/` - business model, financial model, dashboard metrics
+- `project_board_seed/` - seeded milestones, labels, epics, stories, and tasks
+
+## Delivery Governance
+
+The live delivery tracker is the GitHub Project:
+
+[AI Value Discovery Product Build](https://github.com/users/mahmoudahmedalaa/projects/3)
+
+The tracker is seeded from:
+
+- `project_board_seed/milestones.yaml`
+- `project_board_seed/labels.yaml`
+- `project_board_seed/epics_and_stories.yaml`
+
+To re-sync GitHub governance objects:
+
+```bash
+python3 scripts/sync-github-governance.py
+```
+
+Current implementation status is maintained in:
+
+`docs/09-delivery/IMPLEMENTATION_STATUS.md`
+
+## Current Status
+
+Phase 0 governance is complete. The repository has product documentation, delivery governance, GitHub milestones, labels, issues, issue templates, PR template, and a populated GitHub Project board.
+
+Application implementation has not started yet.
