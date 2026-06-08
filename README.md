@@ -89,19 +89,40 @@ The tracker is seeded from:
 - `project_board_seed/milestones.yaml`
 - `project_board_seed/labels.yaml`
 - `project_board_seed/epics_and_stories.yaml`
+- `project_board_seed/implementation_tasks.yaml`
 
 To re-sync GitHub governance objects:
 
 ```bash
 python3 scripts/sync-github-governance.py
+python3 scripts/sync-implementation-tasks.py
 ```
 
 Current implementation status is maintained in:
 
 `docs/09-delivery/IMPLEMENTATION_STATUS.md`
 
+## Local Demo
+
+The first browser demo app lives in `apps/web`.
+
+```bash
+npm install
+npm run dev
+```
+
+Open the local URL printed by Next.js. If port `3000` is occupied, Next.js will use the next available port, such as `http://localhost:3001`.
+
+Validation commands:
+
+```bash
+npm run lint
+npm run typecheck
+npm run build
+```
+
 ## Current Status
 
 Phase 0 governance is complete. The repository has product documentation, delivery governance, GitHub milestones, labels, issues, issue templates, PR template, and a populated GitHub Project board.
 
-Application implementation has not started yet.
+Phase 1 implementation has started with the local Next.js demo scaffold, app shell, seeded GCC bank workspace data, executive cockpit, opportunity detail view, route placeholders, local service compose file, and architecture ADR.

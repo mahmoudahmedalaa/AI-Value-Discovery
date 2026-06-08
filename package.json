@@ -1,0 +1,17 @@
+{
+  "name": "ai-value-discovery",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "cd apps/web && npm run dev",
+    "build": "cd apps/web && npm run build",
+    "start": "cd apps/web && npm run start",
+    "lint": "cd apps/web && npm run lint",
+    "typecheck": "cd apps/web && npm run typecheck",
+    "test": "cd apps/web && npm run test",
+    "e2e": "cd apps/web && npm run e2e",
+    "services:up": "docker compose up -d",
+    "services:down": "docker compose down",
+    "services:logs": "docker compose logs -f"
+  }
+}

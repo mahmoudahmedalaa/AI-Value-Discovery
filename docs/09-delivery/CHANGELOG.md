@@ -1,5 +1,16 @@
 # Changelog
 
+## 2026-06-09
+
+Started Phase 1 implementation:
+
+- Added Next.js, TypeScript, Tailwind, and ESLint web app scaffold under `apps/web`.
+- Added local app shell, workspace selector, executive cockpit, seeded GCC bank demo data, opportunity detail view, and route placeholders for intake, documents, portfolio, decision packs, audit, methodology, and security posture.
+- Added local `docker-compose.yml` for PostgreSQL, Qdrant, and MinIO, plus `.env.example`.
+- Added ADR `docs/07-engineering/adr-0001-pre-mvp-nextjs-architecture.md`.
+- Added executive cockpit concept asset under `docs/03-ux/concepts/`.
+- Verified lint, typecheck, production build, and Playwright visual checks at desktop and mobile widths.
+
 ## 2026-06-08
 
 Created Codex build pack with product, methodology, UX, architecture, AI, security, engineering, testing, delivery, commercial docs, board seed, templates, and kickoff prompt.
