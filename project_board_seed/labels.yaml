@@ -1,0 +1,75 @@
+- name: type:epic
+  color: 5319e7
+  description: Large product workstream
+- name: type:story
+  color: 1d76db
+  description: User/business capability
+- name: type:task
+  color: 0e8a16
+  description: Implementation task
+- name: type:bug
+  color: d73a4a
+  description: Defect
+- name: phase:0-governance
+  color: bfdadc
+  description: Governance and foundation
+- name: phase:1-demo
+  color: c2e0c6
+  description: Internal demo / pre-MVP
+- name: phase:2-mvp
+  color: fef2c0
+  description: MVP product spine
+- name: phase:3-ai-rag
+  color: d4c5f9
+  description: AI/RAG and document intelligence
+- name: phase:4-portfolio
+  color: f9d0c4
+  description: Portfolio and decision packs
+- name: phase:5-enterprise
+  color: bfe5bf
+  description: Enterprise security and deployment
+- name: phase:6-release
+  color: fbca04
+  description: Pilot-ready release
+- name: area:product
+  color: 0052cc
+  description: Product management
+- name: area:ux
+  color: 7057ff
+  description: UX/design
+- name: area:frontend
+  color: 1d76db
+  description: Frontend
+- name: area:backend
+  color: 0052cc
+  description: Backend/API
+- name: area:database
+  color: 006b75
+  description: Database/data model
+- name: area:ai
+  color: 8e44ad
+  description: AI/RAG
+- name: area:security
+  color: b60205
+  description: Security/compliance
+- name: area:devops
+  color: 5319e7
+  description: DevOps/deployment
+- name: area:testing
+  color: 0e8a16
+  description: Testing/QA
+- name: priority:p0
+  color: b60205
+  description: Critical
+- name: priority:p1
+  color: d93f0b
+  description: High
+- name: priority:p2
+  color: fbca04
+  description: Medium
+- name: status:blocked
+  color: '000000'
+  description: Blocked
+- name: demo-critical
+  color: ff69b4
+  description: Required for internal demo

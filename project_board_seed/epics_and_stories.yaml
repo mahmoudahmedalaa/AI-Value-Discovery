@@ -1,0 +1,573 @@
+- id: E0
+  title: 'Epic: Product governance and tracking foundation'
+  phase: Phase 0 — Product Governance & Repo Foundation
+  labels:
+  - type:epic
+  - phase:0-governance
+  - area:product
+  - priority:p0
+  summary: Set up documentation, GitHub Projects, labels, milestones, backlog, and implementation status discipline.
+  stories:
+  - id: E0-S01
+    title: Create GitHub Project board and custom fields
+    labels:
+    - type:story
+    - phase:0-governance
+    - area:product
+    - priority:p0
+    acceptance_criteria:
+    - Board created with phases, statuses, labels, milestones, and initial backlog.
+    - Relevant docs updated.
+    - Issue/project status updated.
+    - Code committed and pushed if implementation changed.
+  - id: E0-S02
+    title: Create repository issue templates
+    labels:
+    - type:story
+    - phase:0-governance
+    - area:product
+    - priority:p1
+    acceptance_criteria:
+    - Issue templates for epic, story, task, bug, and ADR are available.
+    - Relevant docs updated.
+    - Issue/project status updated.
+    - Code committed and pushed if implementation changed.
+  - id: E0-S03
+    title: Create implementation status process
+    labels:
+    - type:story
+    - phase:0-governance
+    - area:product
+    - priority:p0
+    acceptance_criteria:
+    - IMPLEMENTATION_STATUS is updated and tied to git/project board updates.
+    - Relevant docs updated.
+    - Issue/project status updated.
+    - Code committed and pushed if implementation changed.
+  - id: E0-S04
+    title: Establish branch, commit, and PR standards
+    labels:
+    - type:story
+    - phase:0-governance
+    - area:devops
+    - priority:p0
+    acceptance_criteria:
+    - Git practices documented and followed.
+    - Relevant docs updated.
+    - Issue/project status updated.
+    - Code committed and pushed if implementation changed.
+- id: E1
+  title: 'Epic: Local demo environment'
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  labels:
+  - type:epic
+  - phase:1-demo
+  - area:devops
+  - priority:p0
+  - demo-critical
+  summary: Create a no-paid-services local demo that runs on Mahmoud's machine.
+  stories:
+  - id: E1-S01
+    title: Set up local app scaffold
+    labels:
+    - type:story
+    - phase:1-demo
+    - area:frontend
+    - priority:p0
+    - demo-critical
+    acceptance_criteria:
+    - App runs locally with documented command.
+    - Relevant docs updated.
+    - Issue/project status updated.
+    - Code committed and pushed if implementation changed.
+  - id: E1-S02
+    title: Set up local data services
+    labels:
+    - type:story
+    - phase:1-demo
+    - area:devops
+    - area:database
+    - priority:p0
+    - demo-critical
+    acceptance_criteria:
+    - Postgres/Qdrant/MinIO or justified local alternatives run locally.
+    - Relevant docs updated.
+    - Issue/project status updated.
+    - Code committed and pushed if implementation changed.
+  - id: E1-S03
+    title: Create demo seed data
+    labels:
+    - type:story
+    - phase:1-demo
+    - area:database
+    - priority:p0
+    - demo-critical
+    acceptance_criteria:
+    - GCC bank workspace, sample docs, opportunities, scores, and audit events are seeded.
+    - Relevant docs updated.
+    - Issue/project status updated.
+    - Code committed and pushed if implementation changed.
+  - id: E1-S04
+    title: Create mock AI provider
+    labels:
+    - type:story
+    - phase:1-demo
+    - area:ai
+    - priority:p0
+    - demo-critical
+    acceptance_criteria:
+    - Mock provider returns deterministic extraction and recommendations.
+    - Relevant docs updated.
+    - Issue/project status updated.
+    - Code committed and pushed if implementation changed.
+- id: E2
+  title: 'Epic: Enterprise design system and application shell'
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  labels:
+  - type:epic
+  - phase:1-demo
+  - area:ux
+  - area:frontend
+  - priority:p0
+  - demo-critical
+  summary: Build a restrained, sophisticated enterprise cockpit UI.
+  stories:
+  - id: E2-S01
+    title: Implement app shell and navigation
+    labels:
+    - type:story
+    - phase:1-demo
+    - area:frontend
+    - priority:p0
+    - demo-critical
+    acceptance_criteria:
+    - Sidebar, topbar, workspace selector, and main layout are implemented.
+    - Relevant docs updated.
+    - Issue/project status updated.
+    - Code committed and pushed if implementation changed.
+  - id: E2-S02
+    title: Implement design tokens and core components
+    labels:
+    - type:story
+    - phase:1-demo
+    - area:ux
+    - area:frontend
+    - priority:p0
+    - demo-critical
+    acceptance_criteria:
+    - Cards, tables, badges, tooltips, forms, empty/loading/error states exist.
+    - Relevant docs updated.
+    - Issue/project status updated.
+    - Code committed and pushed if implementation changed.
+  - id: E2-S03
+    title: Create executive cockpit page
+    labels:
+    - type:story
+    - phase:1-demo
+    - area:frontend
+    - priority:p0
+    - demo-critical
+    acceptance_criteria:
+    - Executive dashboard shows portfolio summary and decision metrics.
+    - Relevant docs updated.
+    - Issue/project status updated.
+    - Code committed and pushed if implementation changed.
+- id: E3
+  title: 'Epic: Opportunity management'
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  labels:
+  - type:epic
+  - phase:1-demo
+  - area:frontend
+  - area:backend
+  - priority:p0
+  - demo-critical
+  summary: Build core opportunity backlog and detail experience.
+  stories:
+  - id: E3-S01
+    title: Build opportunity backlog table
+    labels:
+    - type:story
+    - phase:1-demo
+    - area:frontend
+    - priority:p0
+    - demo-critical
+    acceptance_criteria:
+    - Table supports filters and opens detail records.
+    - Relevant docs updated.
+    - Issue/project status updated.
+    - Code committed and pushed if implementation changed.
+  - id: E3-S02
+    title: Build manual opportunity creation/editing
+    labels:
+    - type:story
+    - phase:1-demo
+    - area:frontend
+    - area:backend
+    - priority:p0
+    - demo-critical
+    acceptance_criteria:
+    - User can create/edit opportunity with required fields.
+    - Relevant docs updated.
+    - Issue/project status updated.
+    - Code committed and pushed if implementation changed.
+  - id: E3-S03
+    title: Build opportunity detail page
+    labels:
+    - type:story
+    - phase:1-demo
+    - area:frontend
+    - priority:p0
+    - demo-critical
+    acceptance_criteria:
+    - Detail page shows summary, KPI, value, data, controls, evidence, assumptions, scores.
+    - Relevant docs updated.
+    - Issue/project status updated.
+    - Code committed and pushed if implementation changed.
+  - id: E3-S04
+    title: Implement evidence/assumption labels
+    labels:
+    - type:story
+    - phase:1-demo
+    - area:frontend
+    - area:ai
+    - priority:p0
+    - demo-critical
+    acceptance_criteria:
+    - AI-derived/evidence-backed/assumption fields are clearly marked.
+    - Relevant docs updated.
+    - Issue/project status updated.
+    - Code committed and pushed if implementation changed.
+- id: E4
+  title: 'Epic: Scoring and decision engine'
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  labels:
+  - type:epic
+  - phase:1-demo
+  - area:backend
+  - area:product
+  - priority:p0
+  - demo-critical
+  summary: Implement methodology-driven scoring and decision recommendations.
+  stories:
+  - id: E4-S01
+    title: Implement scoring model
+    labels:
+    - type:story
+    - phase:1-demo
+    - area:backend
+    - priority:p0
+    - demo-critical
+    acceptance_criteria:
+    - Dimension scores and weighted composite are calculated.
+    - Relevant docs updated.
+    - Issue/project status updated.
+    - Code committed and pushed if implementation changed.
+  - id: E4-S02
+    title: Implement decision logic
+    labels:
+    - type:story
+    - phase:1-demo
+    - area:backend
+    - priority:p0
+    - demo-critical
+    acceptance_criteria:
+    - Fund Now/Fix First/Defer/Stop/Explore Further decisions are generated.
+    - Relevant docs updated.
+    - Issue/project status updated.
+    - Code committed and pushed if implementation changed.
+  - id: E4-S03
+    title: Build score explanation UI
+    labels:
+    - type:story
+    - phase:1-demo
+    - area:frontend
+    - priority:p0
+    - demo-critical
+    acceptance_criteria:
+    - Users can understand why a score/recommendation was produced.
+    - Relevant docs updated.
+    - Issue/project status updated.
+    - Code committed and pushed if implementation changed.
+- id: E5
+  title: 'Epic: Portfolio cockpit'
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  labels:
+  - type:epic
+  - phase:1-demo
+  - area:frontend
+  - priority:p0
+  - demo-critical
+  summary: Create executive portfolio views for funding decisions.
+  stories:
+  - id: E5-S01
+    title: Build decision lanes
+    labels:
+    - type:story
+    - phase:1-demo
+    - area:frontend
+    - priority:p0
+    - demo-critical
+    acceptance_criteria:
+    - Opportunities grouped by decision state.
+    - Relevant docs updated.
+    - Issue/project status updated.
+    - Code committed and pushed if implementation changed.
+  - id: E5-S02
+    title: Build value-readiness matrix
+    labels:
+    - type:story
+    - phase:1-demo
+    - area:frontend
+    - priority:p1
+    - demo-critical
+    acceptance_criteria:
+    - Matrix shows opportunity positioning.
+    - Relevant docs updated.
+    - Issue/project status updated.
+    - Code committed and pushed if implementation changed.
+  - id: E5-S03
+    title: Build risk/readiness blocker panels
+    labels:
+    - type:story
+    - phase:1-demo
+    - area:frontend
+    - priority:p1
+    - demo-critical
+    acceptance_criteria:
+    - Top blockers are visible.
+    - Relevant docs updated.
+    - Issue/project status updated.
+    - Code committed and pushed if implementation changed.
+- id: E6
+  title: 'Epic: Document intelligence and AI extraction'
+  phase: Phase 3 — AI/RAG & Document Intelligence
+  labels:
+  - type:epic
+  - phase:3-ai-rag
+  - area:ai
+  - priority:p1
+  summary: Build document ingestion, RAG, and AI extraction.
+  stories:
+  - id: E6-S01
+    title: Build document library
+    labels:
+    - type:story
+    - phase:1-demo
+    - area:frontend
+    - priority:p1
+    - demo-critical
+    acceptance_criteria:
+    - Demo document library visible with sample docs.
+    - Relevant docs updated.
+    - Issue/project status updated.
+    - Code committed and pushed if implementation changed.
+  - id: E6-S02
+    title: Build document upload pipeline
+    labels:
+    - type:story
+    - phase:2-mvp
+    - area:backend
+    - area:database
+    - priority:p0
+    acceptance_criteria:
+    - Upload stores document metadata/file.
+    - Relevant docs updated.
+    - Issue/project status updated.
+    - Code committed and pushed if implementation changed.
+  - id: E6-S03
+    title: Integrate Qdrant indexing
+    labels:
+    - type:story
+    - phase:3-ai-rag
+    - area:ai
+    - area:database
+    - priority:p0
+    acceptance_criteria:
+    - Chunks and embeddings stored with workspace metadata.
+    - Relevant docs updated.
+    - Issue/project status updated.
+    - Code committed and pushed if implementation changed.
+  - id: E6-S04
+    title: Implement structured AI extraction
+    labels:
+    - type:story
+    - phase:3-ai-rag
+    - area:ai
+    - priority:p0
+    acceptance_criteria:
+    - AI output validates against schema and creates draft opportunities.
+    - Relevant docs updated.
+    - Issue/project status updated.
+    - Code committed and pushed if implementation changed.
+- id: E7
+  title: 'Epic: Decision packs and exports'
+  phase: Phase 4 — Portfolio Cockpit & Decision Packs
+  labels:
+  - type:epic
+  - phase:4-portfolio
+  - area:frontend
+  - area:backend
+  - priority:p1
+  summary: Generate executive and delivery outputs.
+  stories:
+  - id: E7-S01
+    title: Build decision-pack preview
+    labels:
+    - type:story
+    - phase:1-demo
+    - area:frontend
+    - priority:p0
+    - demo-critical
+    acceptance_criteria:
+    - Demo decision pack preview generated from seed data.
+    - Relevant docs updated.
+    - Issue/project status updated.
+    - Code committed and pushed if implementation changed.
+  - id: E7-S02
+    title: Implement Excel export
+    labels:
+    - type:story
+    - phase:2-mvp
+    - area:backend
+    - priority:p1
+    acceptance_criteria:
+    - Backlog and scores export to Excel.
+    - Relevant docs updated.
+    - Issue/project status updated.
+    - Code committed and pushed if implementation changed.
+  - id: E7-S03
+    title: Implement PDF export
+    labels:
+    - type:story
+    - phase:4-portfolio
+    - area:backend
+    - priority:p1
+    acceptance_criteria:
+    - Executive summary export available.
+    - Relevant docs updated.
+    - Issue/project status updated.
+    - Code committed and pushed if implementation changed.
+  - id: E7-S04
+    title: Implement PPTX export
+    labels:
+    - type:story
+    - phase:4-portfolio
+    - area:backend
+    - priority:p2
+    acceptance_criteria:
+    - Decision pack export available.
+    - Relevant docs updated.
+    - Issue/project status updated.
+    - Code committed and pushed if implementation changed.
+- id: E8
+  title: 'Epic: Security, data residency, and audit'
+  phase: Phase 5 — Enterprise Security & Deployment
+  labels:
+  - type:epic
+  - phase:5-enterprise
+  - area:security
+  - priority:p0
+  summary: Make enterprise trust visible and technically real.
+  stories:
+  - id: E8-S01
+    title: Build security posture page
+    labels:
+    - type:story
+    - phase:1-demo
+    - area:frontend
+    - area:security
+    - priority:p0
+    - demo-critical
+    acceptance_criteria:
+    - Deployment/data policy visible in demo.
+    - Relevant docs updated.
+    - Issue/project status updated.
+    - Code committed and pushed if implementation changed.
+  - id: E8-S02
+    title: Implement audit log
+    labels:
+    - type:story
+    - phase:1-demo
+    - area:backend
+    - area:security
+    - priority:p0
+    - demo-critical
+    acceptance_criteria:
+    - Key actions recorded and visible.
+    - Relevant docs updated.
+    - Issue/project status updated.
+    - Code committed and pushed if implementation changed.
+  - id: E8-S03
+    title: Implement RBAC foundation
+    labels:
+    - type:story
+    - phase:2-mvp
+    - area:security
+    - priority:p0
+    acceptance_criteria:
+    - Roles and permissions modeled.
+    - Relevant docs updated.
+    - Issue/project status updated.
+    - Code committed and pushed if implementation changed.
+  - id: E8-S04
+    title: Implement tenant isolation tests
+    labels:
+    - type:story
+    - phase:5-enterprise
+    - area:security
+    - area:testing
+    - priority:p0
+    acceptance_criteria:
+    - Tests prevent cross-tenant leakage.
+    - Relevant docs updated.
+    - Issue/project status updated.
+    - Code committed and pushed if implementation changed.
+- id: E9
+  title: 'Epic: Testing and quality'
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  labels:
+  - type:epic
+  - phase:1-demo
+  - area:testing
+  - priority:p0
+  summary: Build with quality gates from the start.
+  stories:
+  - id: E9-S01
+    title: Add scoring unit tests
+    labels:
+    - type:story
+    - phase:1-demo
+    - area:testing
+    - priority:p0
+    - demo-critical
+    acceptance_criteria:
+    - Scoring and decision logic covered.
+    - Relevant docs updated.
+    - Issue/project status updated.
+    - Code committed and pushed if implementation changed.
+  - id: E9-S02
+    title: Add demo E2E test
+    labels:
+    - type:story
+    - phase:1-demo
+    - area:testing
+    - priority:p1
+    acceptance_criteria:
+    - Demo path covered by Playwright or equivalent.
+    - Relevant docs updated.
+    - Issue/project status updated.
+    - Code committed and pushed if implementation changed.
+  - id: E9-S03
+    title: Add lint/typecheck scripts
+    labels:
+    - type:story
+    - phase:1-demo
+    - area:testing
+    - area:devops
+    - priority:p0
+    acceptance_criteria:
+    - Checks can be run consistently.
+    - Relevant docs updated.
+    - Issue/project status updated.
+    - Code committed and pushed if implementation changed.

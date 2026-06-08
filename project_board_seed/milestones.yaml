@@ -1,0 +1,14 @@
+- title: Phase 0 — Product Governance & Repo Foundation
+  description: Documentation, board, labels, milestones, repo foundation.
+- title: Phase 1 — Internal Demo / Pre-MVP
+  description: Local demo with no paid services.
+- title: Phase 2 — MVP Product Spine
+  description: Persistent core product capabilities.
+- title: Phase 3 — AI/RAG & Document Intelligence
+  description: Real document intelligence architecture.
+- title: Phase 4 — Portfolio Cockpit & Decision Packs
+  description: Executive outputs and portfolio intelligence.
+- title: Phase 5 — Enterprise Security & Deployment
+  description: Regulated client readiness.
+- title: Phase 6 — Pilot-Ready Release
+  description: Ready for paid sprint/pilot.
