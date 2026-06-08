@@ -9,3 +9,4 @@ Added Phase 0 governance setup:
 - Synchronized GitHub labels, milestones, epic issues, and story issues from `project_board_seed`.
 - Added issue templates and pull request template.
 - Documented GitHub Project access blocker and local fallback board.
+- Closed completed Phase 0 governance stories and left the Project-board story blocked pending GitHub Project scope.

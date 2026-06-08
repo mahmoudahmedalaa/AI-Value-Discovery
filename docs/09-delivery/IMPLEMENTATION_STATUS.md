@@ -13,6 +13,8 @@ Phase 0 — Product Governance & Repo Foundation
 - GitHub epic issues synchronized: 10.
 - GitHub story issues synchronized: 36.
 - Issue templates and PR template added under `.github/`.
+- Phase 0 stories #3, #4, and #5 are closed as completed.
+- Phase 0 story #2 remains open and blocked until GitHub Project scope is refreshed.
 
 ## GitHub Project board
 
@@ -24,7 +26,7 @@ To request it, run:  gh auth refresh -s read:project`
 
 ## Next action for Codex
 
-Commit and push the Phase 0 governance setup. After project scope is refreshed, create/update the GitHub Project board and add the existing issues to it. Then begin Phase 1 with the local demo foundation slice.
+After project scope is refreshed, create/update the GitHub Project board and add the existing issues to it. Then begin Phase 1 with the local demo foundation slice.
 
 ## Blockers
 

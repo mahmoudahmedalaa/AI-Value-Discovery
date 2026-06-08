@@ -26,10 +26,10 @@ Phase, Epic, Priority, Area, Status, Target Release, Risk, Owner, Estimate, Demo
 ## Backlog
 
 ### #1 [E0] Epic: Product governance and tracking foundation
-- Backlog: #2 [E0-S01] Create GitHub Project board and custom fields
-- Backlog: #3 [E0-S02] Create repository issue templates
-- Backlog: #4 [E0-S03] Create implementation status process
-- Backlog: #5 [E0-S04] Establish branch, commit, and PR standards
+- Blocked: #2 [E0-S01] Create GitHub Project board and custom fields
+- Done: #3 [E0-S02] Create repository issue templates
+- Done: #4 [E0-S03] Create implementation status process
+- Done: #5 [E0-S04] Establish branch, commit, and PR standards
 
 ### #6 [E1] Epic: Local demo environment
 - Backlog: #7 [E1-S01] Set up local app scaffold
