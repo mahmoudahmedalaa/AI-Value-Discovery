@@ -1,6 +1,6 @@
-# AI Value Discovery — Codex Build Pack
+# AI Value Discovery
 
-Prepared for: Mahmoud Alaaeldin / Mal7  
+Prepared by: Mahmoud Alaaeldin / Mal7  
 Repository: `https://github.com/mahmoudahmedalaa/AI-Value-Discovery`  
 Date: 2026-06-08
 
