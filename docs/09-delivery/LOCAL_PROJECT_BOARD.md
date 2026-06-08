@@ -6,7 +6,7 @@ GitHub Project is available and is the live delivery board. This file is kept as
 
 - Board: `AI Value Discovery Product Build`
 - URL: https://github.com/users/mahmoudahmedalaa/projects/3
-- Status: Live and populated with all 46 seeded issues.
+- Status: Live and populated with all 149 seeded issues and implementation tasks.
 
 ## Columns
 
@@ -14,7 +14,7 @@ Backlog, Ready, In Progress, In Review, Blocked, Done.
 
 ## GitHub Project Fields
 
-Phase, Epic, Priority, Area, Status, Target Release, Risk, Owner, Estimate, Demo Critical.
+Phase, Epic, Story, Priority, Area, Status, Target Release, Risk, Owner, Estimate, Demo Critical.
 
 ## Backlog
 

@@ -1,0 +1,833 @@
+- id: E1-S01-T01
+  parent: E1-S01
+  title: Scaffold Next.js TypeScript application
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Ready
+  labels: [type:task, phase:1-demo, area:frontend, area:devops, priority:p0, demo-critical]
+  acceptance_criteria:
+    - Next.js app runs locally with TypeScript.
+    - Root route loads without paid services or external API keys.
+- id: E1-S01-T02
+  parent: E1-S01
+  title: Configure package scripts and developer commands
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Ready
+  labels: [type:task, phase:1-demo, area:devops, priority:p0, demo-critical]
+  acceptance_criteria:
+    - Scripts exist for dev, build, lint, typecheck, test, and e2e.
+    - Commands are documented in local setup docs.
+- id: E1-S01-T03
+  parent: E1-S01
+  title: Add TypeScript, ESLint, and formatting baseline
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Ready
+  labels: [type:task, phase:1-demo, area:devops, area:testing, priority:p0, demo-critical]
+  acceptance_criteria:
+    - Typecheck and lint run consistently.
+    - Generated/build folders are ignored.
+- id: E1-S01-T04
+  parent: E1-S01
+  title: Create initial application route map
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Ready
+  labels: [type:task, phase:1-demo, area:frontend, priority:p0, demo-critical]
+  acceptance_criteria:
+    - Routes exist for workspace selection, executive cockpit, documents, opportunities, portfolio, decision pack, audit, and security posture.
+- id: E1-S01-T05
+  parent: E1-S01
+  title: Document local app startup flow
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Backlog
+  labels: [type:task, phase:1-demo, area:devops, priority:p1, demo-critical]
+  acceptance_criteria:
+    - README and local demo docs explain how to run the app.
+    - No paid services are required.
+- id: E1-S02-T01
+  parent: E1-S02
+  title: Add Docker Compose for Postgres, Qdrant, and MinIO
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Ready
+  labels: [type:task, phase:1-demo, area:devops, area:database, priority:p0, demo-critical]
+  acceptance_criteria:
+    - Local services start with one documented command.
+    - Ports, volumes, and service names are stable.
+- id: E1-S02-T02
+  parent: E1-S02
+  title: Add local environment template
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Ready
+  labels: [type:task, phase:1-demo, area:devops, priority:p0, demo-critical]
+  acceptance_criteria:
+    - "`.env.example` contains only non-secret local defaults."
+    - Demo runs without cloud credentials.
+- id: E1-S02-T03
+  parent: E1-S02
+  title: Add service health checks and reset commands
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Backlog
+  labels: [type:task, phase:1-demo, area:devops, area:testing, priority:p1, demo-critical]
+  acceptance_criteria:
+    - Health check command verifies app dependencies.
+    - Reset command can restore seed demo state.
+- id: E1-S02-T04
+  parent: E1-S02
+  title: Add local storage abstraction for MinIO or filesystem fallback
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Backlog
+  labels: [type:task, phase:1-demo, area:backend, area:devops, priority:p1, demo-critical]
+  acceptance_criteria:
+    - Demo can reference seeded documents without external object storage.
+    - Later S3-compatible storage is not hardcoded to one vendor.
+- id: E1-S03-T01
+  parent: E1-S03
+  title: Seed GCC bank workspace profile
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Ready
+  labels: [type:task, phase:1-demo, area:database, area:product, priority:p0, demo-critical]
+  acceptance_criteria:
+    - Workspace includes sector, region, objectives, data posture, and deployment mode.
+- id: E1-S03-T02
+  parent: E1-S03
+  title: Seed sample source documents and metadata
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Ready
+  labels: [type:task, phase:1-demo, area:database, area:ai, priority:p0, demo-critical]
+  acceptance_criteria:
+    - Seed documents have business context, source type, owner, and residency metadata.
+- id: E1-S03-T03
+  parent: E1-S03
+  title: Seed opportunity portfolio dataset
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Ready
+  labels: [type:task, phase:1-demo, area:database, area:product, priority:p0, demo-critical]
+  acceptance_criteria:
+    - Seed opportunities cover Fund Now, Fix First, Defer, Stop, and Explore Further recommendations.
+- id: E1-S03-T04
+  parent: E1-S03
+  title: Seed scores, evidence, assumptions, and missing information
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Ready
+  labels: [type:task, phase:1-demo, area:database, area:product, priority:p0, demo-critical]
+  acceptance_criteria:
+    - Every demo opportunity has score dimensions, evidence labels, assumptions, and gaps.
+- id: E1-S03-T05
+  parent: E1-S03
+  title: Seed audit events and security posture data
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Backlog
+  labels: [type:task, phase:1-demo, area:database, area:security, priority:p0, demo-critical]
+  acceptance_criteria:
+    - Audit and posture screens have credible seeded events and controls.
+- id: E1-S04-T01
+  parent: E1-S04
+  title: Define AI provider interface
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Ready
+  labels: [type:task, phase:1-demo, area:ai, area:backend, priority:p0, demo-critical]
+  acceptance_criteria:
+    - Provider contract supports extraction, scoring support, recommendation support, and provenance.
+- id: E1-S04-T02
+  parent: E1-S04
+  title: Implement deterministic mock extraction provider
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Ready
+  labels: [type:task, phase:1-demo, area:ai, area:backend, priority:p0, demo-critical]
+  acceptance_criteria:
+    - Mock provider returns stable draft opportunities from seeded documents.
+    - Output separates evidence, assumptions, inference, confidence, and missing information.
+- id: E1-S04-T03
+  parent: E1-S04
+  title: Add structured mock AI output fixtures
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Backlog
+  labels: [type:task, phase:1-demo, area:ai, area:testing, priority:p0, demo-critical]
+  acceptance_criteria:
+    - Fixtures validate against the documented output schema.
+- id: E1-S04-T04
+  parent: E1-S04
+  title: Record mock extraction audit events
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Backlog
+  labels: [type:task, phase:1-demo, area:ai, area:security, priority:p1, demo-critical]
+  acceptance_criteria:
+    - Extraction runs produce visible audit events.
+- id: E2-S01-T01
+  parent: E2-S01
+  title: Build enterprise app shell layout
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Ready
+  labels: [type:task, phase:1-demo, area:frontend, area:ux, priority:p0, demo-critical]
+  acceptance_criteria:
+    - Sidebar, topbar, content region, and responsive behavior are implemented.
+- id: E2-S01-T02
+  parent: E2-S01
+  title: Build workspace selector interaction
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Ready
+  labels: [type:task, phase:1-demo, area:frontend, priority:p0, demo-critical]
+  acceptance_criteria:
+    - User can select the sample GCC bank workspace and enter the demo cockpit.
+- id: E2-S01-T03
+  parent: E2-S01
+  title: Add navigation active states and breadcrumbs
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Backlog
+  labels: [type:task, phase:1-demo, area:frontend, area:ux, priority:p1, demo-critical]
+  acceptance_criteria:
+    - Navigation communicates current screen and hierarchy.
+- id: E2-S02-T01
+  parent: E2-S02
+  title: Implement enterprise design tokens
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Ready
+  labels: [type:task, phase:1-demo, area:frontend, area:ux, priority:p0, demo-critical]
+  acceptance_criteria:
+    - Tokens cover typography, color, borders, radius, shadows, spacing, and decision states.
+- id: E2-S02-T02
+  parent: E2-S02
+  title: Build reusable table, panel, badge, tooltip, and button primitives
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Ready
+  labels: [type:task, phase:1-demo, area:frontend, area:ux, priority:p0, demo-critical]
+  acceptance_criteria:
+    - Repeated UI uses shared primitives instead of one-off styling.
+- id: E2-S02-T03
+  parent: E2-S02
+  title: Add loading, empty, and error states
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Backlog
+  labels: [type:task, phase:1-demo, area:frontend, area:ux, priority:p1]
+  acceptance_criteria:
+    - Core screens have credible non-happy-path states.
+- id: E2-S02-T04
+  parent: E2-S02
+  title: Verify accessibility and keyboard focus baseline
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Backlog
+  labels: [type:task, phase:1-demo, area:frontend, area:testing, priority:p1]
+  acceptance_criteria:
+    - Focus states, labels, and semantic regions are present.
+- id: E2-S03-T01
+  parent: E2-S03
+  title: Build executive cockpit summary metrics
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Ready
+  labels: [type:task, phase:1-demo, area:frontend, area:product, priority:p0, demo-critical]
+  acceptance_criteria:
+    - Cockpit shows portfolio size, fundability, readiness, risk, and value summary.
+- id: E2-S03-T02
+  parent: E2-S03
+  title: Build cockpit charts and decision summaries
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Ready
+  labels: [type:task, phase:1-demo, area:frontend, priority:p0, demo-critical]
+  acceptance_criteria:
+    - Cockpit includes restrained charts for decision mix, value/readiness, and blocker themes.
+- id: E2-S03-T03
+  parent: E2-S03
+  title: Build cockpit evidence and document activity panels
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Backlog
+  labels: [type:task, phase:1-demo, area:frontend, area:ai, priority:p1, demo-critical]
+  acceptance_criteria:
+    - Executive view shows recent documents, extraction status, and confidence posture.
+- id: E3-S01-T01
+  parent: E3-S01
+  title: Build opportunity backlog table
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Backlog
+  labels: [type:task, phase:1-demo, area:frontend, priority:p0, demo-critical]
+  acceptance_criteria:
+    - Table supports scanning by title, workflow, KPI, owner, score, confidence, and recommendation.
+- id: E3-S01-T02
+  parent: E3-S01
+  title: Add backlog filters and sorting
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Backlog
+  labels: [type:task, phase:1-demo, area:frontend, priority:p1, demo-critical]
+  acceptance_criteria:
+    - Filters cover decision state, value lever, readiness, risk, and source.
+- id: E3-S01-T03
+  parent: E3-S01
+  title: Link backlog rows to opportunity detail pages
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Backlog
+  labels: [type:task, phase:1-demo, area:frontend, priority:p0, demo-critical]
+  acceptance_criteria:
+    - Clicking a row opens the correct opportunity detail.
+- id: E3-S02-T01
+  parent: E3-S02
+  title: Build manual opportunity form
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Backlog
+  labels: [type:task, phase:1-demo, area:frontend, priority:p0, demo-critical]
+  acceptance_criteria:
+    - Form captures required opportunity fields from the PRD.
+- id: E3-S02-T02
+  parent: E3-S02
+  title: Add opportunity validation rules
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Backlog
+  labels: [type:task, phase:1-demo, area:frontend, area:backend, priority:p1]
+  acceptance_criteria:
+    - Required fields and score prerequisites are validated.
+- id: E3-S02-T03
+  parent: E3-S02
+  title: Add local create/edit persistence path
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Backlog
+  labels: [type:task, phase:1-demo, area:backend, priority:p1, demo-critical]
+  acceptance_criteria:
+    - User-created demo opportunities persist during the local session.
+- id: E3-S03-T01
+  parent: E3-S03
+  title: Build opportunity detail overview
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Backlog
+  labels: [type:task, phase:1-demo, area:frontend, priority:p0, demo-critical]
+  acceptance_criteria:
+    - Detail page shows problem, workflow, KPI, value lever, owner, systems, and recommendation.
+- id: E3-S03-T02
+  parent: E3-S03
+  title: Build data, systems, controls, and blockers sections
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Backlog
+  labels: [type:task, phase:1-demo, area:frontend, area:security, priority:p0, demo-critical]
+  acceptance_criteria:
+    - Detail page exposes readiness blockers and required control remediation.
+- id: E3-S03-T03
+  parent: E3-S03
+  title: Build missing information and review actions
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Backlog
+  labels: [type:task, phase:1-demo, area:frontend, priority:p1, demo-critical]
+  acceptance_criteria:
+    - Detail page makes gaps visible and review actions obvious.
+- id: E3-S04-T01
+  parent: E3-S04
+  title: Implement evidence and assumption label system
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Backlog
+  labels: [type:task, phase:1-demo, area:frontend, area:ai, priority:p0, demo-critical]
+  acceptance_criteria:
+    - Fields distinguish evidence, assumption, inference, recommendation, confidence, and missing information.
+- id: E3-S04-T02
+  parent: E3-S04
+  title: Add evidence source snippets and citations
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Backlog
+  labels: [type:task, phase:1-demo, area:frontend, area:ai, priority:p0, demo-critical]
+  acceptance_criteria:
+    - Evidence links back to seeded document metadata or source notes.
+- id: E4-S01-T01
+  parent: E4-S01
+  title: Implement scoring data types and dimensions
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Backlog
+  labels: [type:task, phase:1-demo, area:backend, area:product, priority:p0, demo-critical]
+  acceptance_criteria:
+    - Score dimensions match the scoring methodology document.
+- id: E4-S01-T02
+  parent: E4-S01
+  title: Implement weighted composite score calculation
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Backlog
+  labels: [type:task, phase:1-demo, area:backend, priority:p0, demo-critical]
+  acceptance_criteria:
+    - Scores are deterministic and explainable.
+- id: E4-S01-T03
+  parent: E4-S01
+  title: Add score explanation output model
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Backlog
+  labels: [type:task, phase:1-demo, area:backend, area:product, priority:p1, demo-critical]
+  acceptance_criteria:
+    - Each dimension can explain why the score was assigned.
+- id: E4-S02-T01
+  parent: E4-S02
+  title: Implement decision recommendation rules
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Backlog
+  labels: [type:task, phase:1-demo, area:backend, area:product, priority:p0, demo-critical]
+  acceptance_criteria:
+    - Rules generate Fund Now, Fix First, Defer, Stop, and Explore Further.
+- id: E4-S02-T02
+  parent: E4-S02
+  title: Add recommendation rationale and thresholds
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Backlog
+  labels: [type:task, phase:1-demo, area:backend, area:product, priority:p0, demo-critical]
+  acceptance_criteria:
+    - Recommendations include rationale, threshold hits, and blockers.
+- id: E4-S03-T01
+  parent: E4-S03
+  title: Build scoring explanation UI
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Backlog
+  labels: [type:task, phase:1-demo, area:frontend, priority:p0, demo-critical]
+  acceptance_criteria:
+    - UI shows dimensions, weights, confidence, and reasons without vague AI language.
+- id: E4-S03-T02
+  parent: E4-S03
+  title: Add methodology tooltips for scoring terms
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Backlog
+  labels: [type:task, phase:1-demo, area:frontend, area:ux, priority:p1]
+  acceptance_criteria:
+    - Terms like readiness, fundability, and value lever are explained in-product.
+- id: E5-S01-T01
+  parent: E5-S01
+  title: Build portfolio decision lanes
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Backlog
+  labels: [type:task, phase:1-demo, area:frontend, priority:p0, demo-critical]
+  acceptance_criteria:
+    - Portfolio groups opportunities by decision state.
+- id: E5-S01-T02
+  parent: E5-S01
+  title: Add lane summaries and funding counts
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Backlog
+  labels: [type:task, phase:1-demo, area:frontend, area:product, priority:p1, demo-critical]
+  acceptance_criteria:
+    - Each lane summarizes value, blockers, and opportunity count.
+- id: E5-S02-T01
+  parent: E5-S02
+  title: Build value-readiness matrix
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Backlog
+  labels: [type:task, phase:1-demo, area:frontend, priority:p1, demo-critical]
+  acceptance_criteria:
+    - Matrix positions opportunities by value and readiness.
+- id: E5-S02-T02
+  parent: E5-S02
+  title: Add matrix hover and selected opportunity behavior
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Backlog
+  labels: [type:task, phase:1-demo, area:frontend, priority:p2]
+  acceptance_criteria:
+    - Matrix can highlight an opportunity and open its detail page.
+- id: E5-S03-T01
+  parent: E5-S03
+  title: Build risk and readiness blocker panels
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Backlog
+  labels: [type:task, phase:1-demo, area:frontend, area:security, priority:p1, demo-critical]
+  acceptance_criteria:
+    - Panels identify top data, workflow, owner, and control blockers.
+- id: E5-S03-T02
+  parent: E5-S03
+  title: Add blocker remediation recommendations
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Backlog
+  labels: [type:task, phase:1-demo, area:product, priority:p1]
+  acceptance_criteria:
+    - Blockers have concrete fix-first actions.
+- id: E6-S01-T01
+  parent: E6-S01
+  title: Build demo document library screen
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Backlog
+  labels: [type:task, phase:1-demo, area:frontend, area:ai, priority:p1, demo-critical]
+  acceptance_criteria:
+    - Screen shows seeded documents, source metadata, residency, and extraction status.
+- id: E6-S01-T02
+  parent: E6-S01
+  title: Add run mock extraction interaction
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Backlog
+  labels: [type:task, phase:1-demo, area:frontend, area:ai, priority:p0, demo-critical]
+  acceptance_criteria:
+    - User can trigger deterministic extraction from seeded documents.
+- id: E6-S01-T03
+  parent: E6-S01
+  title: Build extracted draft opportunity review queue
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Backlog
+  labels: [type:task, phase:1-demo, area:frontend, area:ai, priority:p0, demo-critical]
+  acceptance_criteria:
+    - Draft opportunities require human review before final decision-pack use.
+- id: E6-S02-T01
+  parent: E6-S02
+  title: Implement document metadata schema
+  phase: Phase 2 — MVP Product Spine
+  status: Backlog
+  labels: [type:task, phase:2-mvp, area:backend, area:database, priority:p0]
+  acceptance_criteria:
+    - Uploaded documents store metadata, workspace, owner, source, and retention posture.
+- id: E6-S02-T02
+  parent: E6-S02
+  title: Implement MinIO-backed upload path
+  phase: Phase 2 — MVP Product Spine
+  status: Backlog
+  labels: [type:task, phase:2-mvp, area:backend, area:database, priority:p0]
+  acceptance_criteria:
+    - File upload stores object reference and metadata without cloud dependency.
+- id: E6-S03-T01
+  parent: E6-S03
+  title: Define Qdrant collection and workspace metadata model
+  phase: Phase 3 — AI/RAG & Document Intelligence
+  status: Backlog
+  labels: [type:task, phase:3-ai-rag, area:ai, area:database, priority:p0]
+  acceptance_criteria:
+    - Vector records include workspace and document metadata for isolation.
+- id: E6-S03-T02
+  parent: E6-S03
+  title: Implement deterministic local embedding fallback
+  phase: Phase 3 — AI/RAG & Document Intelligence
+  status: Backlog
+  labels: [type:task, phase:3-ai-rag, area:ai, priority:p1]
+  acceptance_criteria:
+    - Local demo can index/search without paid embedding services.
+- id: E6-S04-T01
+  parent: E6-S04
+  title: Validate structured AI extraction schema
+  phase: Phase 3 — AI/RAG & Document Intelligence
+  status: Backlog
+  labels: [type:task, phase:3-ai-rag, area:ai, area:testing, priority:p0]
+  acceptance_criteria:
+    - Extraction outputs fail closed if required evidence/provenance fields are missing.
+- id: E7-S01-T01
+  parent: E7-S01
+  title: Build executive decision-pack preview route
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Backlog
+  labels: [type:task, phase:1-demo, area:frontend, priority:p0, demo-critical]
+  acceptance_criteria:
+    - Preview includes summary, recommended funding lanes, top opportunities, blockers, and assumptions.
+- id: E7-S01-T02
+  parent: E7-S01
+  title: Add human-review gate before decision-pack preview
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Backlog
+  labels: [type:task, phase:1-demo, area:frontend, area:security, priority:p0, demo-critical]
+  acceptance_criteria:
+    - Preview clearly distinguishes draft and reviewed content.
+- id: E7-S02-T01
+  parent: E7-S02
+  title: Implement portfolio Excel export service
+  phase: Phase 2 — MVP Product Spine
+  status: Backlog
+  labels: [type:task, phase:2-mvp, area:backend, priority:p1]
+  acceptance_criteria:
+    - Export includes opportunities, scores, decisions, assumptions, and blockers.
+- id: E7-S03-T01
+  parent: E7-S03
+  title: Implement executive PDF export
+  phase: Phase 4 — Portfolio Cockpit & Decision Packs
+  status: Backlog
+  labels: [type:task, phase:4-portfolio, area:backend, priority:p1]
+  acceptance_criteria:
+    - PDF export matches decision-pack preview content.
+- id: E7-S04-T01
+  parent: E7-S04
+  title: Implement PPTX decision-pack export
+  phase: Phase 4 — Portfolio Cockpit & Decision Packs
+  status: Backlog
+  labels: [type:task, phase:4-portfolio, area:backend, priority:p2]
+  acceptance_criteria:
+    - PPTX export produces executive-ready slides from reviewed portfolio data.
+- id: E8-S01-T01
+  parent: E8-S01
+  title: Build security and data residency posture page
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Backlog
+  labels: [type:task, phase:1-demo, area:frontend, area:security, priority:p0, demo-critical]
+  acceptance_criteria:
+    - Page shows deployment mode, data boundary, vendor posture, controls, and residual risks.
+- id: E8-S01-T02
+  parent: E8-S01
+  title: Add client-hosted deployment posture copy
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Backlog
+  labels: [type:task, phase:1-demo, area:security, area:product, priority:p1, demo-critical]
+  acceptance_criteria:
+    - Demo messaging is credible for regulated GCC buyers.
+- id: E8-S02-T01
+  parent: E8-S02
+  title: Implement audit event model
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Backlog
+  labels: [type:task, phase:1-demo, area:backend, area:security, priority:p0, demo-critical]
+  acceptance_criteria:
+    - Audit events capture actor, action, object, workspace, timestamp, and source.
+- id: E8-S02-T02
+  parent: E8-S02
+  title: Build audit log screen
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Backlog
+  labels: [type:task, phase:1-demo, area:frontend, area:security, priority:p0, demo-critical]
+  acceptance_criteria:
+    - Audit screen shows key demo actions and filters by event type.
+- id: E8-S03-T01
+  parent: E8-S03
+  title: Model basic roles and permissions
+  phase: Phase 2 — MVP Product Spine
+  status: Backlog
+  labels: [type:task, phase:2-mvp, area:security, area:backend, priority:p0]
+  acceptance_criteria:
+    - Roles cover consultant admin, contributor, reviewer, and executive viewer.
+- id: E8-S04-T01
+  parent: E8-S04
+  title: Add tenant isolation test cases
+  phase: Phase 5 — Enterprise Security & Deployment
+  status: Backlog
+  labels: [type:task, phase:5-enterprise, area:security, area:testing, priority:p0]
+  acceptance_criteria:
+    - Tests prevent cross-workspace access to opportunities, documents, scores, and audit events.
+- id: E9-S01-T01
+  parent: E9-S01
+  title: Add scoring engine unit tests
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Backlog
+  labels: [type:task, phase:1-demo, area:testing, area:backend, priority:p0, demo-critical]
+  acceptance_criteria:
+    - Tests cover score dimensions, composite score, and edge cases.
+- id: E9-S01-T02
+  parent: E9-S01
+  title: Add decision recommendation unit tests
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Backlog
+  labels: [type:task, phase:1-demo, area:testing, area:backend, priority:p0, demo-critical]
+  acceptance_criteria:
+    - Tests cover every recommendation lane and blocker condition.
+- id: E9-S02-T01
+  parent: E9-S02
+  title: Add Playwright demo walkthrough test
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Backlog
+  labels: [type:task, phase:1-demo, area:testing, area:frontend, priority:p1, demo-critical]
+  acceptance_criteria:
+    - E2E covers workspace selection, cockpit, documents, extraction, opportunity detail, portfolio, decision pack, audit, and security posture.
+- id: E9-S03-T01
+  parent: E9-S03
+  title: Add CI-ready lint, typecheck, unit, and e2e scripts
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Ready
+  labels: [type:task, phase:1-demo, area:testing, area:devops, priority:p0]
+  acceptance_criteria:
+    - Scripts can be run locally and later wired to GitHub Actions.
+- id: E9-S03-T02
+  parent: E9-S03
+  title: Add GitHub Actions quality workflow
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Backlog
+  labels: [type:task, phase:1-demo, area:testing, area:devops, priority:p1]
+  acceptance_criteria:
+    - Workflow runs lint, typecheck, and tests on pull requests.
+- id: E2-S01-T04
+  parent: E2-S01
+  title: Verify responsive shell on laptop and mobile widths
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Backlog
+  labels: [type:task, phase:1-demo, area:frontend, area:testing, priority:p1]
+  acceptance_criteria:
+    - Main screens do not overflow or overlap at common desktop and mobile widths.
+- id: E7-S01-T03
+  parent: E7-S01
+  title: Build demo script anchor links through core flow
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Backlog
+  labels: [type:task, phase:1-demo, area:frontend, area:product, priority:p1, demo-critical]
+  acceptance_criteria:
+    - Partner demo flow can move screen-to-screen without hunting.
+- id: E0-S04-T01
+  parent: E0-S04
+  title: Add ADR for initial web app architecture choice
+  phase: Phase 0 — Product Governance & Repo Foundation
+  status: Ready
+  labels: [type:task, phase:0-governance, area:devops, area:backend, priority:p0]
+  acceptance_criteria:
+    - ADR explains Next.js app structure and backend/API route choice for pre-MVP.
+- id: E0-S04-T02
+  parent: E0-S04
+  title: Add ADR for local-first mock AI provider strategy
+  phase: Phase 0 — Product Governance & Repo Foundation
+  status: Backlog
+  labels: [type:task, phase:0-governance, area:ai, area:devops, priority:p1]
+  acceptance_criteria:
+    - ADR documents deterministic mock AI first and later provider abstraction.
+- id: E2-S02-T05
+  parent: E2-S02
+  title: Create design concept and implementation design tokens
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Ready
+  labels: [type:task, phase:1-demo, area:ux, area:frontend, priority:p0, demo-critical]
+  acceptance_criteria:
+    - Visual direction is grounded in enterprise cockpit requirements and translated into tokens.
+- id: E8-S01-T03
+  parent: E8-S01
+  title: Add procurement and data residency FAQ links in product
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Backlog
+  labels: [type:task, phase:1-demo, area:security, area:frontend, priority:p2]
+  acceptance_criteria:
+    - Security posture page links visible product posture back to source docs.
+- id: E2-S03-T04
+  parent: E2-S03
+  title: Add executive cockpit empty and loading states
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Backlog
+  labels: [type:task, phase:1-demo, area:frontend, area:ux, priority:p1]
+  acceptance_criteria:
+    - Cockpit handles no workspace, loading seed data, and extraction pending states.
+- id: E5-S01-T03
+  parent: E5-S01
+  title: Add portfolio filters and scenario controls
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Backlog
+  labels: [type:task, phase:1-demo, area:frontend, area:product, priority:p1]
+  acceptance_criteria:
+    - Portfolio can filter by owner, value lever, risk, readiness, and decision lane.
+- id: E6-S04-T02
+  parent: E6-S04
+  title: Add AI extraction evaluation fixtures
+  phase: Phase 3 — AI/RAG & Document Intelligence
+  status: Backlog
+  labels: [type:task, phase:3-ai-rag, area:ai, area:testing, priority:p1]
+  acceptance_criteria:
+    - Evaluation fixtures cover false positives, weak evidence, missing controls, and hallucination prevention.
+- id: E8-S04-T02
+  parent: E8-S04
+  title: Add workspace boundary tests for API routes
+  phase: Phase 5 — Enterprise Security & Deployment
+  status: Backlog
+  labels: [type:task, phase:5-enterprise, area:security, area:backend, area:testing, priority:p0]
+  acceptance_criteria:
+    - API tests prove workspace scoping for core entities.
+- id: E8-S03-T02
+  parent: E8-S03
+  title: Add SSO-ready auth abstraction
+  phase: Phase 5 — Enterprise Security & Deployment
+  status: Backlog
+  labels: [type:task, phase:5-enterprise, area:security, area:backend, priority:p1]
+  acceptance_criteria:
+    - Local demo auth does not block later SSO integration.
+- id: E8-S03-T03
+  parent: E8-S03
+  title: Add retention and deletion controls
+  phase: Phase 5 — Enterprise Security & Deployment
+  status: Backlog
+  labels: [type:task, phase:5-enterprise, area:security, area:database, priority:p1]
+  acceptance_criteria:
+    - Retention policies can be represented and audited.
+- id: E7-S03-T02
+  parent: E7-S03
+  title: Build financial model panel for decision packs
+  phase: Phase 4 — Portfolio Cockpit & Decision Packs
+  status: Backlog
+  labels: [type:task, phase:4-portfolio, area:frontend, area:product, priority:p1]
+  acceptance_criteria:
+    - Decision pack includes value range, investment estimate, payback, assumptions, and confidence.
+- id: E7-S04-T02
+  parent: E7-S04
+  title: Build pilot charter export content model
+  phase: Phase 4 — Portfolio Cockpit & Decision Packs
+  status: Backlog
+  labels: [type:task, phase:4-portfolio, area:backend, area:product, priority:p1]
+  acceptance_criteria:
+    - Pilot charter includes scope, owner, KPIs, data path, controls, timeline, and success criteria.
+- id: E1-S03-T06
+  parent: E1-S03
+  title: Add second non-bank workspace seed for isolation testing
+  phase: Phase 2 — MVP Product Spine
+  status: Backlog
+  labels: [type:task, phase:2-mvp, area:database, area:testing, priority:p1]
+  acceptance_criteria:
+    - Secondary workspace proves tenant/workspace separation without distracting from demo.
+- id: E1-S02-T05
+  parent: E1-S02
+  title: Add database migration tooling
+  phase: Phase 2 — MVP Product Spine
+  status: Backlog
+  labels: [type:task, phase:2-mvp, area:database, area:devops, priority:p0]
+  acceptance_criteria:
+    - Migrations can create/update the persistent schema repeatably.
+- id: E6-S03-T03
+  parent: E6-S03
+  title: Add document chunking pipeline
+  phase: Phase 3 — AI/RAG & Document Intelligence
+  status: Backlog
+  labels: [type:task, phase:3-ai-rag, area:ai, area:backend, priority:p0]
+  acceptance_criteria:
+    - Chunks preserve source references, section labels, and workspace metadata.
+- id: E9-S02-T02
+  parent: E9-S02
+  title: Add visual regression screenshots for demo-critical screens
+  phase: Phase 1 — Internal Demo / Pre-MVP
+  status: Backlog
+  labels: [type:task, phase:1-demo, area:testing, area:frontend, priority:p1]
+  acceptance_criteria:
+    - Screenshots cover workspace selector, cockpit, opportunity detail, portfolio, decision pack, audit, and security posture.
+- id: E6-S04-T03
+  parent: E6-S04
+  title: Add provider routing policy implementation hooks
+  phase: Phase 3 — AI/RAG & Document Intelligence
+  status: Backlog
+  labels: [type:task, phase:3-ai-rag, area:ai, area:backend, priority:p1]
+  acceptance_criteria:
+    - Provider selection can respect data policy and deployment mode.
+- id: E8-S01-T04
+  parent: E8-S01
+  title: Add threat model implementation checklist
+  phase: Phase 5 — Enterprise Security & Deployment
+  status: Backlog
+  labels: [type:task, phase:5-enterprise, area:security, priority:p1]
+  acceptance_criteria:
+    - STRIDE and AI-specific threats map to implemented controls or explicit gaps.
+- id: E7-S01-T04
+  parent: E7-S01
+  title: Add decision-pack print-friendly layout
+  phase: Phase 4 — Portfolio Cockpit & Decision Packs
+  status: Backlog
+  labels: [type:task, phase:4-portfolio, area:frontend, priority:p2]
+  acceptance_criteria:
+    - Decision-pack preview can be printed or exported cleanly.
+- id: E9-S03-T03
+  parent: E9-S03
+  title: Add pull request quality checklist automation
+  phase: Phase 2 — MVP Product Spine
+  status: Backlog
+  labels: [type:task, phase:2-mvp, area:devops, area:testing, priority:p2]
+  acceptance_criteria:
+    - PR template and checks enforce implementation status, tests, and board updates.
+- id: E5-S02-T03
+  parent: E5-S02
+  title: Add portfolio roadmap view
+  phase: Phase 4 — Portfolio Cockpit & Decision Packs
+  status: Backlog
+  labels: [type:task, phase:4-portfolio, area:frontend, area:product, priority:p1]
+  acceptance_criteria:
+    - Roadmap groups opportunities into now, next, later, and fix-first tracks.
+- id: E8-S01-T05
+  parent: E8-S01
+  title: Add client-ready security pack artifacts
+  phase: Phase 6 — Pilot-Ready Release
+  status: Backlog
+  labels: [type:task, phase:6-release, area:security, area:product, priority:p1]
+  acceptance_criteria:
+    - Security FAQ, deployment posture, and data-residency materials are ready for pilot procurement.
+- id: E7-S01-T05
+  parent: E7-S01
+  title: Add client-ready pilot templates
+  phase: Phase 6 — Pilot-Ready Release
+  status: Backlog
+  labels: [type:task, phase:6-release, area:product, priority:p1]
+  acceptance_criteria:
+    - Pilot kickoff, opportunity review, and executive readout templates are available.
+- id: E9-S02-T03
+  parent: E9-S02
+  title: Add UAT checklist and exit criteria for pilot-ready release
+  phase: Phase 6 — Pilot-Ready Release
+  status: Backlog
+  labels: [type:task, phase:6-release, area:testing, area:product, priority:p1]
+  acceptance_criteria:
+    - Pilot-ready release has explicit acceptance and sign-off criteria.
+- id: E1-S01-T06
+  parent: E1-S01
+  title: Package local demo release instructions
+  phase: Phase 6 — Pilot-Ready Release
+  status: Backlog
+  labels: [type:task, phase:6-release, area:devops, priority:p1]
+  acceptance_criteria:
+    - Local demo can be reset, run, and presented from documented release instructions.
